@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightyellow;
+}
+
+
+.container {
+  width: 30em;
+  height: 30em;
+  background: gold;
+  border-radius: 3%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.container div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(calc((var(--circle-position) - 1) * 36deg));
+}
+
+.container div span {
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  background-color: white;
+}
+
+.container div:nth-child(1) {
+  --circle-position: 1;
+}
+
+.container div:nth-child(2) {
+  --circle-position: 2;
+}
+
+.container div:nth-child(3) {
+  --circle-position: 3;
+}
+
+.container div:nth-child(4) {
+  --circle-position: 4;
+}
+
+.container div:nth-child(5) {
+  --circle-position: 5;
+}
+
+.container div:nth-child(6) {
+  --circle-position: 6;
+}
+
+.container div:nth-child(7) {
+  --circle-position: 7;
+}
+
+.container div:nth-child(8) {
+  --circle-position: 8;
+}
+
+.container div:nth-child(9) {
+  --circle-position: 9;
+}
+
+.container div:nth-child(10) {
+  --circle-position: 10;
+}
