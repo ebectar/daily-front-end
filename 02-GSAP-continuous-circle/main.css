@@ -1,9 +1,9 @@
 body {
-  margin: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  height: 100vh;
   background-color: lightyellow;
 }
 
@@ -12,19 +12,19 @@ body {
   width: 30em;
   height: 30em;
   background: gold;
-  border-radius: 3%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
 }
 
 .container div {
-  position: absolute;
-  width: inherit;
-  height: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  width: inherit;
+  height: inherit;
   transform: rotate(calc((var(--circle-position) - 1) * 36deg));
 }
 
