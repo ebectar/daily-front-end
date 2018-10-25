@@ -1,10 +1,64 @@
-html, body {
-  height: 100%;
-  display: flex;
-  align-items: center;
+@font-face {
+	font-family: 'Plexifont';
+	src:
+		url('./fonts/plexifont-webfont.woff2') format('woff2'),
+		url('./fonts/plexifont-webfont.woff') format('woff');
+}
+
+html,
+body {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: papayawhip;
+	font-family: 'Plexifont', sans-serif;
 }
 
 .box {
-  width: 20em;
-  border: 2px solid black; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 7em;
+	height: 5em;
+	border: 2px solid black;
+	border-radius: 16px;
+	text-align: center;
+	font-size: 7em;
+	line-height: 2em;
+	overflow: hidden;
+	letter-spacing: 0.5em;
+	padding-left: 1em;
+}
+
+.box span {
+	display: inline-block;
+	color: blue;
+	transition: 0.5s;
+}
+
+.box span:nth-child(odd) {
+	transform: translateY(-200%);
+}
+
+.box span:nth-child(even) {
+	transform: translateY(200%);
+}
+
+.box span::before {
+	content: attr(data-text);
+	position: absolute;
+	color: red;
+}
+
+.box span:nth-child(odd)::before {
+	transform: translateY(200%);
+}
+
+.box span:nth-child(even)::before {
+	transform: translateY(-200%);
+}
+
+.box:hover span {
+	transform: translateY(0);
 }
