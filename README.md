@@ -1,5 +1,5 @@
-# daily-front-end
-Daily exercises to play with front-end development
+# Daily Front End
+(Somewhat) Daily exercises to play with front-end development
 
 ## Technologies Explored
   * HTML5/CSS3
