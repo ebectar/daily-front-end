@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.text {
+  background-color: black;
+  color: white;
+  font-size: 10em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.text::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  filter: blur(0.02em);
+  mix-blend-mode: difference;
+}
