@@ -4,12 +4,16 @@
   "description": "Bear cub animation using Pug and Sass",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "sass --include-path scss scss/styles.scss public/css/styles.css",
+    "build-html": "pug --include-path index.pug public/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "gulp-pug": "^4.0.1"
   }
 }

@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-	background: radial-gradient(circle, #ffe8ec 50%, #ffc0cb);
-	font-family: 'Bree Serif', serif;
+	background: radial-gradient(circle, #fffae8 50%, #ffc219);
+	font-family: sans-serif;
 }
 
 .wrapper {
@@ -30,7 +30,7 @@ body {
 	color: darken(#ffc0cb, 70%);
   	
 	.title {
-		font-size: 1.6em;
+		font-size: 2em;
 	}
 	
 	.subtitle {
@@ -50,6 +50,16 @@ body {
 	box-shadow: inset 16px 15px 10px 6px rgba(0, 0, 0, 0.22);
 }
 
+%mouth-details {
+	content: '';
+	border-radius: 50%;
+	background: none;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 3px 0 0 #000;
+	z-index: 1;
+}
+
 .bear {
   position: relative;
 }
@@ -62,7 +72,8 @@ body {
 	display: flex;
   justify-content: center;
   position: relative;
-  box-shadow: inset -1px 36px 16px rgba(0, 0, 0, 0.21);
+	box-shadow: inset -1px 36px 16px rgba(0, 0, 0, 0.21), inset 0 -2px 36px 1px rgba(0, 0, 0, 0.2);
+	z-index: 2;
 }
 
 .bear__ears {
@@ -123,6 +134,46 @@ body {
   }
 }
 
+.bear__snout {
+	background: $fur-color;
+	width: 70px;
+	height: 50px;
+	border-radius: 60% 60% 70% 70%;
+	position: absolute;
+	top: 60%;
+	box-shadow: inset 2px 5px 10px 10px rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+
+.bear__nose {
+	position: absolute;
+	z-index: 1;
+	top: 25%;
+	left: 15%;
+	width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 20px solid black;
+	border-bottom: 20px solid transparent;
+	border-radius: 40% 40% 40% 40%;
+}
+
+	.bear__mouth {
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		bottom: 10px;
+
+		&::before,
+		&::after {
+			@extend %mouth-details;
+		}
+	}
+
 .bear__body {
 	position: relative;
 	display: flex;
@@ -132,13 +183,13 @@ body {
 .bear__chest {
 	background: $fur-color;
 	width: $head-size + 10px;
-	height: $head-size / 1.2 ;
-	box-shadow: inset -4px 22px 20px rgba(0, 0, 0, 0.21), 							    inset 0 -19px 3px 8px rgba(0, 0, 0, 0.21);
-	border-radius: 40% 40% 60% 60%;
+	height: $head-size / 1.2;
+	box-shadow: inset -4px 22px 20px rgba(0, 0, 0, 0.21), 							    inset 0 -19px 3px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 60% 60% 50% 50%;
 	display: flex;
 	justify-content: center;
 	position: relative;
-	top: -30px;
+	top: -35px;
 	z-index: 1;
   
   .chest-details {
@@ -175,6 +226,77 @@ body {
 	}
 }
 
+.bear__front-legs {
+	display: flex;
+	position: absolute;
+	left: 15px;
+	right: 0;
+	
+	.paw {
+		width: 30px;
+		height: 10px;
+		border-top: 60px solid $fur-color;
+    border-left: 15px solid transparent;
+    border-right: 5px solid transparent;
+		margin-top: 45px;
+		
+		&.right {
+			transform: rotateY(180deg);
+		}
+		
+		&::before {
+			content: '';
+			background: darken($fur-color, 5%);
+			width: 40px;
+			height: 20px;
+			display: block;
+			border-radius: 20px 50%;
+			position: relative;
+			left: -9px;
+			top: -5px;
+		}
+		
+		&::after {
+			content: '';
+    	width: 8px;
+    	height: 7px;
+    	border-radius: 50%;
+    	box-shadow: -2px 0 0 1px rgba(0, 0, 0, 0.4), 
+									-6px 0 0 1px $fur-color, 
+									-8px 0 0 1px rgba(0, 0, 0, 0.4);
+    	display: block;
+    	position: relative;
+    	top: -14px;
+			left: 8px;
+		}
+	}
+}
+
+.bear__back-legs {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: -25px;
+	right: -30px;
+	bottom: -7px;
+	position: absolute;
+
+	.paw {
+		width: 70px;
+		height: 90px;
+		background-color: $fur-color;
+		border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
+		box-shadow: inset 0 -1px 36px 16px rgba(0, 0, 0, 0.21), inset 0 -2px 36px 1px rgba(0, 0, 0, 0.2);
+		
+		&.left {
+			transform: rotate(30deg)
+		}
+		&.right {
+			transform: rotate(-30deg)
+		}
+	}
+}
+
 .ground {
 	background: rgba(0, 0, 0, 0.12);
   width: 500px;
@@ -182,4 +304,5 @@ body {
   border-radius: 50%;
 	display: table;
 	margin-top: -70px;
-}
+	filter: blur(4px);
+	}
