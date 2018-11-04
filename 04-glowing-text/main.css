@@ -8,6 +8,7 @@ body {
 }
 
 .text {
+  position: relative;
   background-color: black;
   color: white;
   font-size: 10em;
@@ -16,10 +17,26 @@ body {
   font-family: sans-serif;
 }
 
+
 .text::before {
   content: attr(data-text);
   position: absolute;
   color: white;
   filter: blur(0.02em);
   mix-blend-mode: difference;
+}
+
+.glow {
+  overflow:hidden;
+  filter: brightness(200%)
+}
+
+.gradient {
+  background: linear-gradient(45deg, purple, magenta, pink, bisque, magenta, purple);
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
