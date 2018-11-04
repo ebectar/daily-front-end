@@ -27,7 +27,7 @@ body {
 }
 
 .glow {
-  overflow:hidden;
+  overflow: hidden;
   filter: brightness(200%)
 }
 
@@ -39,4 +39,23 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.lights {
+  background: radial-gradient(circle, white, transparent 25%) center / 25% 25%,
+    radial-gradient(circle, white, black 25%) center / 12% 12%;
+  animation: shine 5s linear infinite;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: -100%;
+  right: 0;
+  bottom: 0;
+  left: -100%;
+  transform: rotate(45deg);
+}
+
+@keyframes shine {
+  to {
+    transform: translate(50%, 50%)
+  }
 }
