@@ -6,14 +6,19 @@ html, body {
 }
 
 .container {
-  text-transform: uppercase;
-  font-family: sans-serif;
-	--container-width: 15em;
+	--container-width: 13em;
   --container-height: 5em;
   width: var(--container-width);
   height: var(--container-width) / 3;
+  font-family: sans-serif;
+  text-transform: uppercase;
 	text-align: center;
 	line-height: var(--container-height);
-	font-size: calc(var(--container-height) / 2.5);
-	letter-spacing: 0.2em;
+  font-size: calc(var(--container-height) / 2.5);
+  text-shadow: 3px 2px 1px rgba(0,0,0,0.3);
+  letter-spacing: 0.2em;
+  border: 1px solid black;
+  border-radius: 2em;
+  box-shadow: 2px 0 0 2px rgba(0,0,0,0.2);
+  transform: perspective(calc(var(--container-width) * 2)) rotateY(-15deg);
 }
