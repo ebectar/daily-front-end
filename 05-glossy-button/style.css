@@ -8,8 +8,6 @@ html, body {
 .container {
 	--container-width: 13em;
   --container-height: 5em;
-  --text-shadow: -3px 2px 1px rgba(0, 0, 0, 0.2);
-  --box-shadow: 2px 0 0 3px rgba(0,0,0,0.2);
   width: var(--container-width);
   height: var(--container-width) / 3;
   font-family: sans-serif;
@@ -17,16 +15,34 @@ html, body {
 	text-align: center;
 	line-height: var(--container-height);
   font-size: calc(var(--container-height) / 2.5);
-  text-shadow: var(--text-shadow);
+  text-shadow:  4px 2px 1px rgba(0,0,0,0.2);
   letter-spacing: 0.2em;
-  border: 1px solid black;
+  border: 1px solid pink;
   border-radius: 2em;
-  box-shadow: var(--box-shadow);
+  box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.2);
   transform: perspective(calc(var(--container-width) * 2)) rotateY(-15deg);
+  transition: 0.5s;
+  background: linear-gradient(to right, pink, magenta, purple);
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .container:hover {
 	transform: perspective(calc(var(--container-width) * 2)) rotateY(15deg);
-	text-shadow: var(--text-shadow);
-	box-shadow: var(--box-shadow);
+	text-shadow: -4px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: -2px 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.container::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, transparent, white, transparent);
+	left: -100%;
+	transition: 0.5s;
+}
+
+.container:hover::before {
+	left: 100%;
 }
