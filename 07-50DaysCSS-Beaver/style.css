@@ -1,3 +1,8 @@
+:root {
+  --light-fur: rgba(234, 169, 108, 1);
+  --dark-fur: peru;
+}
+
 body {
   background-color: #afeeee;
   position: relative;
@@ -10,13 +15,13 @@ body {
   top: 50%;
 }
 
-.beaver{
+.beaver {
   width: 5rem;
   height: 9rem;
   margin-left: 1.6rem;
   margin-top: -2rem;
   background-color: saddlebrown;
-  background-image: repeating-linear-gradient(25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px), 
+  background-image: repeating-linear-gradient(25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px),
     repeating-linear-gradient(-25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px);
   box-shadow: inset -13px -5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 40px;
@@ -33,11 +38,20 @@ body {
   height: 13rem;
   margin-left: -7rem;
   transform: rotate(-45deg);
-  background-image: radial-gradient(ellipse at center, peru 30px, transparent 30px),
-    radial-gradient(circle at center 20px, peru 90px, transparent 80px),
-    radial-gradient(ellipse at center 100%, peru 50px, transparent 50px);
+  background-image: radial-gradient(ellipse at bottom, var(--light-fur) 30px, transparent 1px),
+    linear-gradient(70deg, transparent 20%, white 20%),
+    linear-gradient(-70deg, transparent 20%, white 20%),
+    radial-gradient(circle at center 20px, var(--dark-fur) 90px, transparent 80px),
+    radial-gradient(ellipse at center 100%, var(--dark-fur) 60px, transparent 50px);
   background-repeat: no-repeat;
+  background-size: 85% 100%,
+    13px 30px,
+    13px 30px,
+    100% 100%,
+    100% 100%;
   background-position: 0 0,
+    44px 70px,
+    58px 70px,
     0 0,
     0 0;
   border-top-left-radius: 60px 80px;
@@ -46,21 +60,31 @@ body {
   border-bottom-right-radius: 50px 40px;
 }
 
-.face::before, .face::after {
+.face::before,
+.face::after {
   position: absolute;
   content: '';
-  background-image: radial-gradient(circle at center, black 3px, transparent 5px);
+  background-image: radial-gradient(circle at center, black 4px, transparent 5px);
   width: 10px;
   height: 10px;
-  top: 95px;
-  left: -97px;
+  top: 10px;
+  left: -25px;
 }
 
-.face::before {
-  left: -58px;
-  top: 55px;
+.face::after {
+  left: 12px;
+  top: -27px;
 }
 
 .face {
-  background-image: linear-gradient(2px white)
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  background-image: linear-gradient(white 2px);
+  border-radius: 50%;
+  box-shadow: 0px 12px 0 5px var(--light-fur),
+    14px -2px 0 5px var(--light-fur);
+  position: relative;
+  top: 86px;
+  left: -81px;
 }
