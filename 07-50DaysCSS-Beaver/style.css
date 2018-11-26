@@ -1,0 +1,66 @@
+body {
+  background-color: #afeeee;
+  position: relative;
+  height: 100vh;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.beaver{
+  width: 5rem;
+  height: 9rem;
+  margin-left: 1.6rem;
+  margin-top: -2rem;
+  background-color: saddlebrown;
+  background-image: repeating-linear-gradient(25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px), 
+    repeating-linear-gradient(-25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px);
+  box-shadow: inset -13px -5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  border-bottom-left-radius: 40px 100px;
+  border-bottom-right-radius: 40px 100px;
+  transform: rotate(45deg);
+}
+
+.beaver::before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 9rem;
+  height: 13rem;
+  margin-left: -7rem;
+  transform: rotate(-45deg);
+  background-image: radial-gradient(ellipse at center, peru 30px, transparent 30px),
+    radial-gradient(circle at center 20px, peru 90px, transparent 80px),
+    radial-gradient(ellipse at center 100%, peru 50px, transparent 50px);
+  background-repeat: no-repeat;
+  background-position: 0 0,
+    0 0,
+    0 0;
+  border-top-left-radius: 60px 80px;
+  border-top-right-radius: 60px 80px;
+  border-bottom-left-radius: 50px 40px;
+  border-bottom-right-radius: 50px 40px;
+}
+
+.face::before, .face::after {
+  position: absolute;
+  content: '';
+  background-image: radial-gradient(circle at center, black 3px, transparent 5px);
+  width: 10px;
+  height: 10px;
+  top: 95px;
+  left: -97px;
+}
+
+.face::before {
+  left: -58px;
+  top: 55px;
+}
+
+.face {
+  background-image: linear-gradient(2px white)
+}
