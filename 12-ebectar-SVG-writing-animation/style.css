@@ -1,0 +1,46 @@
+.logo-path {
+	stroke-dasharray: 800, 1000;
+	stroke-linecap: round;
+	stroke-dashoffset: -400;
+	stroke-miterlimit: 8;
+	animation-delay: 1s;
+	animation-duration: 400ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	fill: transparent;
+	animation-name: logo-animation;
+}
+
+.logo-path.e {
+	animation-timing-function: ease-in-out;
+	animation-duration: 400ms;
+}
+
+.logo-path.be {
+	animation-delay: 1.8s;
+	stroke-dashoffset: -700;
+}
+
+.logo-path.ct {
+	animation-delay: 2.2s;
+	stroke-dashoffset: -640;
+}
+
+.logo-path.ar {
+	animation-timing-function: ease-out;
+	animation-delay: 2.6s;
+	stroke-dashoffset: -740;
+}
+
+.logo-path.cross-t {
+	animation-timing-function: ease-out;
+	animation-delay: 3.2s;
+	stroke-dashoffset: -200;
+	animation-duration: 200ms;
+}
+
+@keyframes logo-animation {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
