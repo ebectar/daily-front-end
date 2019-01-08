@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  border-radius: 50%;
+}
+
+.link-wrapper {
+  position: absolute;
+  z-index: 500;
+  height: 300px;
+  width: 100%;
+}

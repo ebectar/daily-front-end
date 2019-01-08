@@ -10,8 +10,15 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
     //[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]
 
-  body
-    .container
+  body.centered
+    header.centered
+      div.nav-container
+        div.header-flex.centered
+          h2.nav-title.centered Daily Front End
+          nav.nav-links.centered
+            a(href='#') about
+            a(href='#') contact
+    .project-container.centered
       each val in ["01-50DaysCSS-BearCub/public/index.html", "02-GSAP-continuous-circle/index.html", "03-staggered-text-buttons/index.html", "04-glowing-text/index.html","05-glossy-button/index.html","06-50DaysCSS-Elephant/public/index.html", "07-50DaysCSS-Beaver/index.html", "12-ebectar-SVG-writing-animation/index.html"]
         .project
           a(href=val)
