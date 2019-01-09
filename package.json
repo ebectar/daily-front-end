@@ -1,0 +1,23 @@
+{
+  "name": "daily-front-end",
+  "version": "1.0.0",
+  "description": "Front end ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebectar/daily-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebectar/daily-front-end/issues"
+  },
+  "homepage": "https://github.com/ebectar/daily-front-end#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "sass": "^1.15.3"
+  }
+}
