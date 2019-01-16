@@ -11,8 +11,8 @@ body {
 
 .wrapper {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 25%;
 }
 
 .beaver {
@@ -23,11 +23,11 @@ body {
   background-color: saddlebrown;
   background-image: repeating-linear-gradient(25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px),
     repeating-linear-gradient(-25deg, transparent, transparent 10px, rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.2) 12px);
-  box-shadow: inset -13px -5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 13px -5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 40px;
   border-bottom-left-radius: 40px 100px;
   border-bottom-right-radius: 40px 100px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 
 .beaver::before {
@@ -36,55 +36,62 @@ body {
   position: absolute;
   width: 9rem;
   height: 13rem;
-  margin-left: -7rem;
-  transform: rotate(-45deg);
-  background-image: radial-gradient(ellipse at bottom, var(--light-fur) 30px, transparent 1px),
-    linear-gradient(70deg, transparent 20%, white 20%),
-    linear-gradient(-70deg, transparent 20%, white 20%),
-    radial-gradient(circle at center 20px, var(--dark-fur) 90px, transparent 80px),
-    radial-gradient(ellipse at center 100%, var(--dark-fur) 60px, transparent 50px);
+  margin-left: 3rem;
+  transform: rotate(45deg);
+  background-image: radial-gradient(ellipse at bottom, var(--light-fur) 30px, transparent 1px), linear-gradient(72deg, transparent 20%, white 20%), linear-gradient(-70deg, transparent 20%, white 20%), radial-gradient(circle at center 30px, var(--dark-fur) 90px, transparent 80px), radial-gradient(ellipse at center 100%, var(--dark-fur) 60px, transparent 50px);
   background-repeat: no-repeat;
-  background-size: 85% 100%,
+  background-size:
+    85% 100%,
     13px 30px,
     13px 30px,
     100% 100%,
     100% 100%;
-  background-position: 0 0,
-    44px 70px,
-    58px 70px,
-    0 0,
-    0 0;
+  background-position:
+    32px 10px,
+    83px 70px,
+    92px 70px,
+    0 0, 0 0;
   border-top-left-radius: 60px 80px;
   border-top-right-radius: 60px 80px;
   border-bottom-left-radius: 50px 40px;
   border-bottom-right-radius: 50px 40px;
 }
 
-.face::before,
-.face::after {
+.beaver::after {
   position: absolute;
   content: '';
-  background-image: radial-gradient(circle at center, black 4px, transparent 5px);
-  width: 10px;
-  height: 10px;
-  top: 10px;
-  left: -25px;
-}
-
-.face::after {
-  left: 12px;
-  top: -27px;
+  background-image: radial-gradient(circle at bottom, saddlebrown 62%, transparent 2px), radial-gradient(circle at center, white 1px, transparent 2px), radial-gradient(circle at center, white 1px, transparent 2px), radial-gradient(circle at center, black 4px, transparent 5px), radial-gradient(circle at center, black 4px, transparent 5px);
+  background-position: 0 8px, -28px 16px, 3px 45px, -80px -33px, -49px -4px;
+  background-repeat: no-repeat;
+  background-size: 18px 16px, 50% 50%, 50% 50%, 100% 100%, 100% 100%;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  left: 130px;
 }
 
 .face {
   width: 15px;
   height: 15px;
   background-color: black;
-  background-image: linear-gradient(white 2px);
-  border-radius: 50%;
-  box-shadow: 0px 12px 0 5px var(--light-fur),
-    14px -2px 0 5px var(--light-fur);
+  border-radius: 34% 50%;
+  box-shadow: -15px 0px 0 5px var(--light-fur),
+    1px 15px 0 5px var(--light-fur);
   position: relative;
-  top: 86px;
-  left: -81px;
+  top: 84px;
+  left: 155px;
+}
+
+.log {
+  position: absolute;
+  top: 68%;
+  left: 35%;
+  background-color: saddlebrown;
+  width: 200px;
+  height: 83px;
+  background-image: repeating-linear-gradient(-5deg, peru, transparent 50px, rgba(0, 0, 0, 0.2) 20px,rgb(139, 69, 19, 0.2) 40px);
+  border-top-left-radius: 40px 20px;
+  border-top-right-radius: 40px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
