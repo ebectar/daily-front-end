@@ -17,13 +17,14 @@ gulp.task('css:build', function(){
 });
 
 gulp.task('pug:watch', () => {
-  return gulp
-      .watch('./*.pug', ['pug']);
+  return gulp.watch('./*.pug', ['pug']);
 });
 
 gulp.task('sass:watch', function(){
   gulp.watch('./scss/**/*.scss', ['sass']); 
-})
+});
 
-gulp.task('pug', ['pug:watch', 'html:build']);
-gulp.task('sass', ['sass:watch', 'css:build']);
+var pugWatch = gulp.watch()
+
+gulp.task('pug', gulp.parallel('pug:watch', 'html:build'));
+gulp.task('sass', gulp.parallel('sass:watch', 'css:build'));
