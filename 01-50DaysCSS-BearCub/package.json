@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-css": "sass --include-path scss scss/styles.scss public/css/styles.css",
-    "build-html": "pug --include-path index.pug public/index.html"
+    "build-html": "pug --include-path index.pug public/index.html",
+    "node:css": "node-sass scss/styles.scss public/css/styles.css -w"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
-    "gulp-pug": "^4.0.1"
+    "gulp-pug": "^4.0.1",
+    "node-sass": "^4.11.0"
   }
 }
