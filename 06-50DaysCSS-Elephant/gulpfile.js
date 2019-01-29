@@ -21,8 +21,8 @@ function css() {
 }
 
 function watch() {
-  gulp.watch('./*.pug', ['pug']);
-  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('./*.pug', html);
+  gulp.watch('./scss/**/*.scss', css);
 }
 
 exports.html = html;
