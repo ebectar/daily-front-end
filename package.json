@@ -2,9 +2,10 @@
   "name": "daily-front-end",
   "version": "1.0.0",
   "description": "Front end ",
-  "main": "index.js",
+  "homepage": "http://front-end-ace.surge.sh",
   "scripts": {
-    "build:css": "node-sass styles/scss/style.scss styles/css/style.css -w"
+    "build:css": "node-sass styles/scss/style.scss styles/css/style.css -w",
+    "deploy": "surge --domain $npm_package_homepage"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/ebectar/daily-front-end/issues"
   },
-  "homepage": "https://github.com/ebectar/daily-front-end#readme",
   "dependencies": {
     "node-sass": "^4.11.0",
     "sass": "^1.15.3"

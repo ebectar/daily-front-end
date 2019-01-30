@@ -3,29 +3,18 @@ body {
   height: 100%; }
 
 body {
-  background: radial-gradient(circle, #b2e0ff 50%, #529dff);
-  font-family: 'Shadows Into Light', cursive; }
-
-.header {
-  background: rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  text-align: center; }
-  .header .header__title {
-    font-size: 2em; }
-  .header .header__subtitle {
-    margin: 0 6px;
-    opacity: .5; }
+  background: #b2e0ff; }
 
 .wrapper {
   display: flex;
-  height: calc(100% - 100px);
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   .wrapper .elephant {
-    position: relative; }
+    position: relative;
+    right: 4em; }
     .wrapper .elephant .elephant-head {
       background: #b5c0c6;
       width: 190px;
@@ -146,3 +135,14 @@ body {
           right: -34px;
           transform: rotate(40deg);
           border-radius: 150px 0 150px 0; }
+      .wrapper .elephant .elephant-body .front-legs {
+        background-color: #b5c0c6;
+        height: 110px;
+        width: 60px;
+        position: relative;
+        top: 157px;
+        left: 20px;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%; }
+        .wrapper .elephant .elephant-body .front-legs:before {
+          content: ''; }
