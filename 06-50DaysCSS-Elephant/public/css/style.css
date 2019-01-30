@@ -113,36 +113,49 @@ body {
       border-top-right-radius: 60% 40%;
       border-bottom-right-radius: 40% 60%;
       border-bottom-left-radius: 40% 40%;
-      box-shadow: 3px 10px 0px #98a7b0; }
-      .wrapper .elephant .elephant-body .tail {
-        width: 50px;
-        height: 10px;
-        background-color: #b5c0c6;
-        position: absolute;
-        z-index: 0;
-        top: 82px;
-        right: -35px;
-        transform: rotate(50deg);
-        border-radius: 30%; }
-        .wrapper .elephant .elephant-body .tail:before {
-          content: "";
-          width: 38px;
-          height: 22px;
-          background-color: #422a1e;
-          position: absolute;
-          z-index: 0;
-          bottom: -9px;
-          right: -34px;
-          transform: rotate(40deg);
-          border-radius: 150px 0 150px 0; }
+      box-shadow: 3px 10px 0px #98a7b0;
+      z-index: 0; }
       .wrapper .elephant .elephant-body .front-legs {
         background-color: #b5c0c6;
         height: 110px;
         width: 60px;
-        position: relative;
-        top: 157px;
-        left: 20px;
+        position: absolute;
         border-bottom-left-radius: 20%;
-        border-bottom-right-radius: 20%; }
-        .wrapper .elephant .elephant-body .front-legs:before {
-          content: ''; }
+        border-bottom-right-radius: 20%;
+        border-top-right-radius: 40% 60%;
+        box-shadow: inset -8px -10px 0px #98a7b0;
+        top: 160px;
+        left: 20px; }
+        .wrapper .elephant .elephant-body .front-legs::before {
+          content: "";
+          background-color: #b5c0c6;
+          height: 110px;
+          width: 60px;
+          position: absolute;
+          border-bottom-left-radius: 20%;
+          border-bottom-right-radius: 20%;
+          border-top-right-radius: 40% 60%;
+          box-shadow: inset -8px -10px 0px #98a7b0;
+          top: 160px;
+          left: 20px; }
+    .wrapper .elephant .tail {
+      width: 50px;
+      height: 10px;
+      background-color: #b5c0c6;
+      position: absolute;
+      z-index: 0;
+      top: 82px;
+      right: -35px;
+      transform: rotate(50deg);
+      border-radius: 30%; }
+      .wrapper .elephant .tail:before {
+        content: "";
+        width: 38px;
+        height: 22px;
+        background-color: #422a1e;
+        position: absolute;
+        z-index: 0;
+        bottom: -9px;
+        right: -34px;
+        transform: rotate(40deg);
+        border-radius: 150px 0 150px 0; }
