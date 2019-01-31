@@ -109,6 +109,15 @@ body {
         border-radius: 50%;
         background-color: $body-color;
         box-shadow: -1px 7px 0px $body-color-dark;
+
+        .spray {
+          width:145px;
+          height:70px;
+          border:solid 1px rgba(255, 255, 255, 0.4);
+          border-color:rgba(255, 255, 255, 0.4) transparent transparent transparent;
+          border-radius: 50%/50px 50px 0 0;
+          position: absolute;
+        }
         
         &:after {
           content: "";
@@ -193,6 +202,7 @@ body {
         right: -35px;
         transform: rotate(50deg);
         border-radius: 30%;
+        animation: tail 2s infinite;
         
         &:before {
           content: "";
@@ -209,5 +219,14 @@ body {
       }
     
   }  
-}  
+}
+
+@keyframes tail {
+  0% {
+    transform: rotateZ(10deg)
+  }
+  100% {
+    transform:rotate(20deg)
+  }
+}
 
